@@ -22,12 +22,12 @@ class Dictionary
   end
 
   def find(str)
-    entries.select {|k,v| k =~ /^#{str}/ }
+    entries.select { |k,v| k =~ /^#{str}/ }
   end
 
   def printable
     str = []
-    new_hash = entries.sort_by { |k, v| k}
+    new_hash = entries.sort_by { |k, v| k }
     new_hash.each do |k,v|
       str << "[#{k}] \"#{v}\"" 
     end
